@@ -37,9 +37,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                         </li>
                     </ul>
                     <div class="user_option">
-                        <a href="" class="user_link">
+                        <!--Masha -->
+                        <a href="" class="user_link" data-toggle="modal" data-target="#modalLoginForm">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
+
                         <a class="cart_link" href="#">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                                 <g>
@@ -1221,10 +1223,102 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
     </div>
 </section>
 
-<!-- end client section -->
+<!--Modal sign in-->
+<form action="/login.php" method="POST">
+    <div class="modal fade modal_login" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <?php
+                if (isLogin()) {
+                    $user = getCurrentUser();
+                ?>
+                    <h2 class="text-center">Hello, <?php echo $user['username']; ?></h2>
+                    <a class="text-center link-dark" href="/logout.php" style="color: #565656;">Log out</a>
 
+                <?php
+                } else {
+                ?>
+                    <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                        <input type="email" id="defaultForm-email" class="form-control validate" placeholder="name@example.com" name="email">
 
+                    </div>
 
+                    <div class="md-form mb-4">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Password" name="password">
+
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="1" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="submit" class="btn btn-dark">Sign in</button>
+                </div>
+                <div class="create text-center fs-2" style="margin-bottom: 15px; cursor: pointer;">
+                    <a class="create__acc" href="" data-toggle="modal" data-target="#modalRegisterForm" data-dismiss="modal">Create account?</a>
+                </div>
+                <?php
+                }
+
+                ?>
+                
+            </div>
+        </div>
+    </div>
+</form>
+<!--Modal register-->
+<form action="/register.php" method="POST">
+    <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Register</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-4">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Username</label>
+                        <input type="text" id="defaultForm-email" class="form-control validate" placeholder="username" name="name">
+
+                    </div>
+
+                    <div class="md-form mb-4">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Email</label>
+                        <input type="email" id="defaultForm-pass" class="form-control validate" placeholder="email" name="email">
+
+                    </div>
+                    <div class="md-form mb-4">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Password</label>
+                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Password" name="password">
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="1" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="submit" class="btn btn-dark">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/partials/footer.php');
