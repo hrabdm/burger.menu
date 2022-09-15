@@ -1,3 +1,5 @@
+  <!-- close main -->
+  </div>
  <!-- footer section -->
  <footer class="footer_section">
      <div class="container">
@@ -79,8 +81,9 @@
          </div>
      </div>
  </footer>
+ <!-- close wrapper -->
+ </div>
  <!-- footer section -->
-
  <!-- jQery -->
  <script src="assets/js/jquery-3.4.1.min.js"></script>
  <!-- popper js -->
@@ -101,7 +104,7 @@
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
  </script>
  <!-- End Google Map -->
-
+ 
  </body>
 
  </html>

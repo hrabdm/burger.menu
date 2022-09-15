@@ -1,3 +1,8 @@
+<?php
+require($_SERVER['DOCUMENT_ROOT'] . '/configs/db.php');
+session_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/configs/helpers.php');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -30,6 +35,10 @@
     <!-- responsive style -->
     <link href="assets/css/responsive.css" rel="stylesheet" />
 
+   
+
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="main">
