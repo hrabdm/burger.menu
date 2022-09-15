@@ -1,4 +1,5 @@
 <?php
+require($_SERVER['DOCUMENT_ROOT'] . '/configs/db.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 ?>
 
@@ -1239,41 +1240,41 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                 } else {
                 ?>
                     <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body mx-3">
-                    <div class="md-form mb-5">
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-                        <input type="email" id="defaultForm-email" class="form-control validate" placeholder="name@example.com" name="email">
+                        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                            <input type="email" id="defaultForm-email" class="form-control validate" placeholder="name@example.com" name="email">
+
+                        </div>
+
+                        <div class="md-form mb-4">
+                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                            <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Password" name="password">
+
+                        </div>
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="1" name="remember"> Remember me
+                            </label>
+                        </div>
 
                     </div>
-
-                    <div class="md-form mb-4">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Password" name="password">
-
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" class="btn btn-dark">Sign in</button>
                     </div>
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="1" name="remember"> Remember me
-                        </label>
+                    <div class="create text-center fs-2" style="margin-bottom: 15px; cursor: pointer;">
+                        <a class="create__acc" href="" data-toggle="modal" data-target="#modalRegisterForm" data-dismiss="modal">Create account?</a>
                     </div>
-
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button type="submit" class="btn btn-dark">Sign in</button>
-                </div>
-                <div class="create text-center fs-2" style="margin-bottom: 15px; cursor: pointer;">
-                    <a class="create__acc" href="" data-toggle="modal" data-target="#modalRegisterForm" data-dismiss="modal">Create account?</a>
-                </div>
                 <?php
                 }
 
                 ?>
-                
+
             </div>
         </div>
     </div>
