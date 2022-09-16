@@ -35,10 +35,6 @@ require($_SERVER['DOCUMENT_ROOT'] . '/configs/helpers.php');
     <!-- responsive style -->
     <link href="assets/css/responsive.css" rel="stylesheet" />
 
-   
+
 
 </head>
-
-<body>
-    <div class="wrapper">
-        <div class="main">
