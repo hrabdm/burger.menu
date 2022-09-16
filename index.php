@@ -3,6 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/configs/db.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
 ?>
 
+
  <?php
     $page = "home";
     if (isset($_GET['p'])) {
