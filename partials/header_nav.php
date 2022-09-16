@@ -184,11 +184,6 @@
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Password</label>
                         <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Password" name="password">
                     </div>
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="1" name="remember"> Remember me
-                        </label>
-                    </div>
 
                 </div>
                 <div class="modal-footer d-flex justify-content-center">

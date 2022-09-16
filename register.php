@@ -1,16 +1,17 @@
-<?php 
-require('partials/header.php');
-if(!empty($_POST)) {
+<?php
+require($_SERVER['DOCUMENT_ROOT'] . '/configs/db.php');
+if (!isset($_SESSION)) {
+    session_start();
+}
+if (!empty($_POST)) {
+    /* хеширование пароля */
+    $passwordHash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-  $sql = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('" . $_POST['name'] . "', '" . $_POST['email'] . "', '" . $_POST['password'] . "');";
-  if (mysqli_query($conn, $sql)) {
-      echo "Insert";
-      header ("location: /");
-  } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
- }
-?>
-<?php 
-require('partials/footer.php')
-?>
+    $sql = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('" . $_POST['name'] . "', '" . $_POST['email'] . "', '" . $passwordHash . "');";
+    if (mysqli_query($conn, $sql)) {
+        echo "Insert";
+        header("location: /");
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+}
