@@ -135,7 +135,7 @@
                         </div>
                         <div class="checkbox mb-3">
                             <label>
-                                <input type="checkbox" value="1" name="remember"> Remember me
+                                <input type="checkbox" value="1" name="remember" checked> Remember me
                             </label>
                         </div>
 
