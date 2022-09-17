@@ -7,7 +7,7 @@ if (!empty($_POST)) {
     /* хеширование пароля */
     $passwordHash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('" . $_POST['name'] . "', '" . $_POST['email'] . "', '" . $passwordHash . "');";
+    $sql = "INSERT INTO `users` (`username`, `email`, `password`, `userphone`) VALUES ('" . $_POST['name'] . "', '" . $_POST['email'] . "', '" . $passwordHash . "', '" . $_POST['phone'] . "');";
     if (mysqli_query($conn, $sql)) {
         echo "Insert";
         header("location: /");

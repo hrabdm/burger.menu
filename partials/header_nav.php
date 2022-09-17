@@ -170,19 +170,25 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="md-form mb-4">
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Username</label>
-                        <input type="text" id="defaultForm-email" class="form-control validate" placeholder="username" name="name">
+                        <label data-error="wrong" data-success="right" for="defaultForm-name">Name</label>
+                        <input type="text" id="defaultForm-name" class="form-control validate" placeholder="Your name" name="name">
 
                     </div>
 
                     <div class="md-form mb-4">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Email</label>
-                        <input type="email" id="defaultForm-pass" class="form-control validate" placeholder="email" name="email">
+                        <label data-error="wrong" data-success="right" for="defaultForm-phone">Phone number</label>
+                        <input type="tel" id="defaultForm-phone" class="form-control validate" placeholder="123-4567-8901" name="phone">
+
+                    </div>
+
+                    <div class="md-form mb-4">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
+                        <input type="email" id="defaultForm-pass" class="form-control validate" placeholder="Your e-mail" name="email">
 
                     </div>
                     <div class="md-form mb-4">
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Password</label>
-                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Password" name="password">
+                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Enter your new password" name="password">
                     </div>
 
                 </div>
