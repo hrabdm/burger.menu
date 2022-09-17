@@ -16,7 +16,8 @@ if (!empty($_POST['name']) && !empty($_POST['phone'])) {
 
 
     if (mysqli_query($conn, $sql)) {
-        echo 'Your request has been received';
+        echo "<div class='alert alert-success alert-dismissible fade show'>
+              <strong>Success! </strong>Your request to book a table for <strong>" . $_POST['persons'] . " person</strong> on <strong>" . $_POST['date'] . "</strong> has been received and we are working hard on it. Please expect a booking confirmation call within 10 minutes.</div>";
     } else {
         echo 'Error: ' . $sql . '<br>' . mysqli_error($conn);
         echo 'Please, fill all fields before sending';

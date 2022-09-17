@@ -49,6 +49,9 @@
               </button>
             </div>
           </form>
+          <div id="my_message">
+
+          </div>
         </div>
       </div>
       <div class="col-md-6">
@@ -59,5 +62,3 @@
     </div>
   </div>
 </section>
-
-<div id="my_message" style="color: red;"></div>
