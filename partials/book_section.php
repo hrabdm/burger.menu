@@ -49,6 +49,7 @@
               </button>
             </div>
           </form>
+          <!-- message about result from server -->
           <div id="my_message">
 
           </div>

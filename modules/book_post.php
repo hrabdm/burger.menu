@@ -1,5 +1,5 @@
 <?php
-if (!$_POST) exit('No direct script access allowed');
+if (!$_POST) exit('<div class="alert alert-danger" role="alert">No direct script access allowed</div>');
 
 require($_SERVER['DOCUMENT_ROOT'] . '/configs/db.php');
 
@@ -8,7 +8,7 @@ if (!empty($_POST['name']) && !empty($_POST['phone'])) {
     $phone = trim(strip_tags($_POST['phone']));
     $email = trim(strip_tags($_POST['email']));
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        exit('Wrong email! Refresh the page (F5) and sign right email!');
+        exit('<div class="alert alert-warning" role="alert">Wrong email! Refresh the page (F5) and sign right email!</div>');
     }
 
     $sql =
