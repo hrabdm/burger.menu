@@ -30,9 +30,9 @@ $(window).on('load', function () {
 });
 
 // nice select
-$(document).ready(function() {
+$(document).ready(function () {
     $('select').niceSelect();
-  });
+});
 
 /** google_map js **/
 function myMap() {
@@ -67,5 +67,22 @@ $(".client_owl-carousel").owlCarousel({
             items: 2
         }
     }
+});
+
+// ajax send book form 
+$('#ajaxForm').submit(function () {
+    console.log($("#ajaxForm"));
+
+    $.post(
+        'modules/book_post.php', // адрес обработчика
+        $("#ajaxForm").serialize(), // отправляемые данные  		
+
+        function (msg) { // получен ответ сервера
+            $('#ajaxForm').hide('slow');
+            $('#my_message').html(msg);
+        }
+    );
+
+    return false;
 });
 
