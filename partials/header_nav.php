@@ -27,12 +27,11 @@
                     </li>
                 </ul>
                 <div class="user_option">
-                    <!--Masha -->
                     <a href="" class="user_link" data-toggle="modal" data-target="#modalLoginForm">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </a>
 
-                    <a class="cart_link" href="#">
+                    <a class="cart_link" href="/?p=cart">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                             <g>
                                 <g>
