@@ -32,13 +32,13 @@
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="/admin/users.php">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-user"></i>
             <span>Users</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="/admin/book.php">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-book"></i>
             <span>Book table</span></a>
     </li>
 

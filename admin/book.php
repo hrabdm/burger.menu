@@ -20,7 +20,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/admin/partials/header.php');
             <!-- Begin Page Content -->
             <div class="container-fluid">
                 <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Booked tables</h1>
+                <h1 class="h3 mb-2 text-gray-800">Book table</h1>
 
                 <?php
 
