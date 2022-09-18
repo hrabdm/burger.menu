@@ -1,4 +1,5 @@
 <?php
+require($_SERVER['DOCUMENT_ROOT'] . '/configs/db.php');
 function isLogin()
 {
     $is_session = isset($_SESSION["user_id"]) &&  $_SESSION["user_id"] != null;
@@ -34,4 +35,5 @@ function getUserId() {
         return false;
     }
 }
+
 ?>

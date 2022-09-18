@@ -86,3 +86,16 @@ $('#ajaxForm').submit(function () {
     return false;
 });
 
+// ajax send to cart
+const cartLinks = $('.product_link_with_id');
+$.each(cartLinks, function() {
+    $(this).bind('click', function() {
+        let currentId = $(this).attr('data-id');
+        $.get('modules/cart_post.php', {"product_id": currentId}).done(function() {
+            alert('success');
+        });
+      
+    });
+});
+
+
