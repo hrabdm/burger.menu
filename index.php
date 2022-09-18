@@ -20,6 +20,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
             case 'menu':
                 $page = 'menu';
                 break;
+            case 'cart':
+                $page = 'cart';
+                break;
         }
     }
     require($_SERVER['DOCUMENT_ROOT'] . "/partials/pages/$page.php");
