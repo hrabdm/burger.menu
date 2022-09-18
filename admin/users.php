@@ -30,9 +30,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/admin/partials/header.php');
                     switch ($_GET['page']) {
                         case 'edit':
                             require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/user/edit.php');
+                            require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/user/all.php');
                             break;
                         case 'add':
                             require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/user/add.php');
+                            require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/user/all.php');
                             break;
                     }
                 }

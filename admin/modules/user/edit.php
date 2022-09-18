@@ -3,7 +3,8 @@
 if (!empty($_POST)) {
     $sql = "UPDATE `users` SET `username` = '" . $_POST['name'] . "', `email` = '" . $_POST['email'] . "', `userphone` = '" . $_POST['userphone'] . "' WHERE `users`.`id` = " . $_GET['id'] . ";";
     if (mysqli_query($conn, $sql)) {
-        echo "<h2>Дані оновлено<br><a href='/admin/users.php'>Повернутись</a></h2>";
+        // echo "<h2>Дані оновлено<br><a href='/admin/users.php'>Повернутись</a></h2>";
+        echo "<script>window.location.href='/admin/users.php';</script>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -14,7 +15,7 @@ $row = $result->fetch_assoc();
 ?>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Users list</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Edit User, ID <?php echo $row['id']; ?></h6>
     </div>
     <div class="card-body">
         <form action="?page=edit&id=<?php echo $_GET['id'] ?>" method="POST">

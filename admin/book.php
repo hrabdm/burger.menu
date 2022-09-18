@@ -23,16 +23,17 @@ require($_SERVER['DOCUMENT_ROOT'] . '/admin/partials/header.php');
                 <h1 class="h3 mb-2 text-gray-800">Book table</h1>
 
                 <?php
-
                 if (empty($_GET)) {
                     require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/book/all.php');
                 } else {
                     switch ($_GET['page']) {
                         case 'edit':
                             require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/book/edit.php');
+                            require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/book/all.php');
                             break;
                         case 'add':
                             require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/book/add.php');
+                            require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/book/all.php');
                             break;
                     }
                 }
