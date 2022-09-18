@@ -36,4 +36,19 @@ function getUserId() {
     }
 }
 
+function getProductById($id) {
+    global $conn;
+    $sql =   'SELECT * FROM `menu` WHERE `id` =' . $id;
+    $req = mysqli_query($conn, $sql);
+    $resp = $req->fetch_assoc();
+    return $resp;
+}
+
+function getProductCount() {
+    global $conn;
+    $res = $conn->query("SELECT count(*) FROM cart");
+    $row = $res->fetch_row();
+    $count = $row[0];
+    return $count;
+}
 ?>

@@ -1,3 +1,7 @@
+
+$(function() {
+
+
 // to get current year
 function getYear() {
     var currentDate = new Date();
@@ -88,14 +92,23 @@ $('#ajaxForm').submit(function () {
 
 // ajax send to cart
 const cartLinks = $('.product_link_with_id');
+let productCount = $('#productCount');
+
 $.each(cartLinks, function() {
-    $(this).bind('click', function() {
+    $(this).bind('click', function(e) {
+        e.preventDefault();
         let currentId = $(this).attr('data-id');
-        $.get('modules/cart_post.php', {"product_id": currentId}).done(function() {
-            alert('success');
+        $.post('modules/cart_post.php', {"product_id": currentId}).done(function(data) {
+            productCount.html(data);
         });
       
     });
 });
 
+//delete product from cart
 
+
+
+
+
+});
