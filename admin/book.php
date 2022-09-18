@@ -20,19 +20,19 @@ require($_SERVER['DOCUMENT_ROOT'] . '/admin/partials/header.php');
             <!-- Begin Page Content -->
             <div class="container-fluid">
                 <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Users</h1>
+                <h1 class="h3 mb-2 text-gray-800">Booked tables</h1>
 
                 <?php
 
                 if (empty($_GET)) {
-                    require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/user/all.php');
+                    require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/book/all.php');
                 } else {
                     switch ($_GET['page']) {
                         case 'edit':
-                            require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/user/edit.php');
+                            require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/book/edit.php');
                             break;
                         case 'add':
-                            require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/user/add.php');
+                            require($_SERVER['DOCUMENT_ROOT'] . '/admin/modules/book/add.php');
                             break;
                     }
                 }
