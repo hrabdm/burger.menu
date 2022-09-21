@@ -99,16 +99,11 @@ $.each(cartLinks, function() {
         e.preventDefault();
         let currentId = $(this).attr('data-id');
         $.post('modules/cart_post.php', {"product_id": currentId}).done(function(data) {
-            productCount.html(data);
+            
         });
       
     });
 });
-
-//delete product from cart
-
-
-
 
 
 });

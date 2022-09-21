@@ -56,8 +56,8 @@ if ($result = $conn->query($sql)) :
 
                 <?php
                 foreach ($result as $row) :
-                  $sum += $row['price'];
                   $total = $row['price'] * $row['quantity'];
+                  $sum += $total;
                 ?>
                   <tr>
                     <td class="p-4">
