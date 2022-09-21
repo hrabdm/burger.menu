@@ -100,7 +100,7 @@ $(function () {
             $.post('modules/cart_post.php', {
                 "product_id": currentId
             }).done(function (data) {
-
+                productCount.html(data);
             });
 
         });
