@@ -19,7 +19,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/configs/helpers.php');
     <link rel="shortcut icon" href="assets/images/favicon.png" type="">
 
     <title> Feane </title>
-
+    <!-- bootsrtap css -->
+    <link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+    <link href="assets/css/jquery.formstyler.theme.css" rel="stylesheet" />
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
 

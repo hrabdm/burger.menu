@@ -140,6 +140,10 @@
 	top: auto;
 	bottom: 0;
 }
+.jq-number__spin.plus{
+	top: auto;
+	bottom: 0;
+}
 .jq-number__spin:hover {
 	background: linear-gradient(#F6F6F6, #E6E6E6);
 }
@@ -192,7 +196,7 @@
 	cursor: pointer;
 }
 .jq-selectbox__select {
-	height: 32px;
+	height: 34px;
 	padding: 0 45px 0 10px;
 	border: 1px solid #CCC;
 	border-bottom-color: #B3B3B3;
@@ -459,3 +463,4 @@ input[type='submit'].styler[disabled] {
 	box-shadow: none;
 	color: #888;
 }
+
