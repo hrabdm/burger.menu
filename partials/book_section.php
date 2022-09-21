@@ -10,13 +10,13 @@
         <div class="form_container">
           <form id="ajaxForm" action="" method="POST">
             <div>
-              <input type="text" class="form-control" placeholder="Your Name" value="testname" name="name" required>
+              <input type="text" class="form-control" placeholder="Your Name" name="name" required>
             </div>
             <div>
-              <input type="tel" class="form-control" placeholder="Phone Number" value="111 111 111" name="phone" required>
+              <input type="tel" class="form-control" placeholder="Phone Number" name="phone" required>
             </div>
             <div>
-              <input type="email" class="form-control" placeholder="Your Email" value="test@nam.e" name="email">
+              <input type="email" class="form-control" placeholder="Your Email" name="email">
             </div>
             <div>
               <select class="form-control nice-select wide" name="persons" required>
@@ -41,7 +41,7 @@
               </select>
             </div>
             <div>
-              <input type="date" class="form-control" value="2022-09-22" name="date">
+              <input type="date" class="form-control" name="date">
             </div>
             <div class="btn_box">
               <button type="submit">
