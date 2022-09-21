@@ -71,7 +71,10 @@ if ($result = $conn->query($sql)) :
                     </td>
                     <td class="text-right font-weight-semibold align-middle p-4"><?php echo $row['price']; ?>$</td>
                     <td class="align-middle p-4">
-                      <input type="text" class="totlalPrice form-control text-center" value="1">
+
+                    <div class="section  number-plus-minus">
+                      <input class="inputNumber" type="number" value="<?php echo $row['quantity']; ?>"/>
+                    </div>
                     </td>
                     <td class="text-right font-weight-semibold align-middle p-4"><?php echo $total; ?>$</td>
                     <td class="text-center align-middle px-0"><a href="/modules/del_product.php?id=<?php echo $row['id']; ?>" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
